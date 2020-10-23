@@ -8,11 +8,11 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="{{ url('/') }}">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
+          <li class="active"><a href="{{ url('/') }}">Beranda</a></li>
+          <li><a href="#about">Tentang</a></li>
+          <li><a href="#services">Layanan</a></li>
+          <li><a href="#portfolio">Testimoni</a></li>
+          <li><a href="#team">Tim</a></li>
           <li class="drop-down"><a href="">Cari</a>
             <ul>
               <li><a href="#">Menemukan Barang</a></li>
@@ -26,10 +26,10 @@
               <li><a href="#">Drop Down 2</a></li>
             </ul>
           </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Kontak</a></li>
 
 
-          <li class="drop-down"><a href="">User</a>
+          <li class="drop-down"><a href="">Pengguna</a>
             @guest
             <ul>
               <li><a href="{{ route('login') }}">Login</a></li>
@@ -64,7 +64,7 @@
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <a href="#about" class="get-started-btn scrollto">Ayo Lakukan</a>
 
     </div>
   </header><!-- End Header -->
