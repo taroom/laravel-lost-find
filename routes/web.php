@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::resource('barang', 'BarangController');
+Route::resource('kategori', 'KategoriController');
+Route::resource('tag', 'TagController');
+Route::resource('user-profile', 'UserProfileController');
+Route::resource('tag-barang', 'TagBarangController');
