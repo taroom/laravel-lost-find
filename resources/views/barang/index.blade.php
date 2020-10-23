@@ -1,21 +1,26 @@
 @extends('layouts.app')
+
+@section('content')
 <main id="main">
     <br>
     <section id="featured-services" class="featured-services">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                  <!-- MULAI -->
-
-
+                <div class="col-lg-12 col-md-6">
+                    <!-- MULAI -->
+                    <br>
+                    <br>
+                    <br>
 
 
                     <div class="container">
                         <div class="row">
-                            <div class="col-10">
+                            <div class="col-12">
                                 <h3 class="mt-3">Daftar Barang Temuan</h3>
                                 <a class="btn btn-primary" href="/barang/create">Masukkan Barang Temuan Anda</a>
 
+                                <br>
+                                <br>
                                 <table class="table table-striped">
                                 <thead>
                                     <tr>
@@ -30,7 +35,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($barang as $benda)
+                                    @foreach($barang ?? '' as $benda)
                                     <tr>
                                     <th scope="row">{{ $loop->iteration}}</th>
                                     <td>{{$benda->gambar}}</td>

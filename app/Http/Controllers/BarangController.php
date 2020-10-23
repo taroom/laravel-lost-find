@@ -15,7 +15,7 @@ class BarangController extends Controller
     public function index()
     {
         $barang = Barang::all();
-        return view('barang.index');
+        return view('barang.index', compact('barang'));
     }
 
     /**
@@ -36,7 +36,7 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'gambar' => 'required',
             'deskripsi' => 'required',
             'tanggal_menemukan' => 'required',
