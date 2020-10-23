@@ -23,12 +23,12 @@
                 @foreach($barang ?? '' as $benda)
                 <tr>
                 <th scope="row">{{ $loop->iteration}}</th>
-                <td>{{$benda -> gambar}}</td>
-                <td>{{$benda -> deskripsi}}</td>
-                <td>{{$benda -> id_kategori}}</td>
-                <td>{{$benda -> tanggal_menemukan}}</td>
-                <td>{{$benda -> tempat_menemukan}}</td>
-                <td>{{$benda -> user_id}}</td>
+                <td>{{$benda->gambar}}</td>
+                <td>{{$benda->deskripsi}}</td>
+                <td>{{$benda->id_kategori}}</td>
+                <td>{{$benda->tanggal_menemukan}}</td>
+                <td>{{$benda->tempat_menemukan}}</td>
+                <td>{{$benda->user_id}}</td>
                 <td> 
                     <a href="/barang/{{$benda->id}}/edit" class="badge badge-success">edit</a>
                     <form action="/barang/{{$benda->id}}" method="post">

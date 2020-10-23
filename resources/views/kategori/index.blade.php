@@ -20,9 +20,9 @@
                 @foreach($kategori as $jenis)
                 <tr>
                 <th scope="row">{{ $loop->iteration}}</th>
-                <td>{{$jenis -> nama}}</td>
-                <td>{{$jenis -> slug}}</td>
-                <td>{{$jenis -> deskripsi}}</td>
+                <td>{{$jenis->nama}}</td>
+                <td>{{$jenis->slug}}</td>
+                <td>{{$jenis->deskripsi}}</td>
                 <td> 
                     <a href="/kategori/{{$jenis->id}}/edit" class="badge badge-success">edit</a>
                     <form action="/kategori/{{$jenis->id}}" method="post">
