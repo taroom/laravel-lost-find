@@ -18,7 +18,11 @@
 </head>
 <body>
     @include('layouts.header')
+    <br>
+    <br>
     @yield('content')
+    <br>
+    <br>
     @include('layouts.footer')
         
     <!-- Scripts -->

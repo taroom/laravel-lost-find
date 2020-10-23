@@ -14,7 +14,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        //
+        $barang = Barang::all();
+        return view('barang.index');
     }
 
     /**
@@ -35,7 +36,19 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'gambar' => 'required',
+            'deskripsi' => 'required',
+            'tanggal_menemukan' => 'required',
+            'tempat_menemukan' => 'required',
+        ]);
+
+        Barang::create([
+            'gambar' => $request->gambar,
+            'deskripsi' => $request->deskripsi,
+            'tanggal_menemukan' => $request->tanggal_menemukan,
+            'tempat_menemukan' => $request->tempat_menemukan
+        ]);
     }
 
     /**
