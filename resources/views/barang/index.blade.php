@@ -30,7 +30,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($barang ?? '' as $benda)
+                                    @foreach($barang as $benda)
                                     <tr>
                                     <th scope="row">{{ $loop->iteration}}</th>
                                     <td>{{$benda->gambar}}</td>
