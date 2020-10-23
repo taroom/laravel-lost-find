@@ -7,11 +7,11 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Elegant and creative solutions</h1>
-          <h2>We are team of talanted designers making websites with Bootstrap</h2>
+          <h1>Aplikasi Pencari Barang Hilang</h1>
+          <h2>Pencarian barang kini jadi lebih mudah dan praktis</h2>
           <div class="d-flex">
-            <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
+            <a href="#about" class="btn-get-started scrollto">Mari Mulai </a>
+            <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> -Tonton Video Demonya <i class="icofont-play-alt-2"></i></a>
           </div>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img">
@@ -25,6 +25,8 @@
   <main id="main">
 
     <!-- ======= Featured Services Section ======= -->
+    <br>
+
     <section id="featured-services" class="featured-services">
       <div class="container">
 
@@ -32,22 +34,22 @@
           <div class="col-lg-4 col-md-6">
             <div class="icon-box">
               <div class="icon"><i class="icofont-computer"></i></div>
-              <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-              <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+              <h4 class="title"><a href="">User Friendly</a></h4>
+              <p class="description"><b>Tampilan aplikasi yang memudahkan user.</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="icofont-image"></i></div>
-              <h4 class="title"><a href="">Dolor Sitema</a></h4>
-              <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+              <h4 class="title"><a href="">Cepat</a></h4>
+              <p class="description"><b>Cepat dalam pencarian barang yang hilang.</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.  </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="icofont-tasks-alt"></i></div>
-              <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-              <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+              <h4 class="title"><a href="">Praktis</a></h4>
+              <p class="description"><b>Pengunaan aplikasi yang mudah dijalankan.</b> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </div>
           </div>
         </div>
@@ -56,6 +58,7 @@
     </section><!-- End Featured Services Section -->
 
     <!-- ======= About Section ======= -->
+    <br>
     <section id="about" class="about">
       <div class="container">
 
@@ -64,19 +67,17 @@
             <img src="{{ asset('enno/assets/img/about.png') }}" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0 content">
-            <h3>Voluptatem dignissimos provident quasi corporis voluptates</h3>
+            <h3>Kenapa anda harus memilih Aplikasi Pencari Barang Hilang </h3>
             <p class="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Aplikasi Pencari Barang Hilang memiliki sejumlah keunggulan :
             </p>
             <ul>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="icofont-check-circled"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="icofont-check-circled"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda</li>
+              <li><i class="icofont-check-circled"></i> User Friendly</li>
+              <li><i class="icofont-check-circled"></i> Cepat</li>
+              <li><i class="icofont-check-circled"></i> Praktis</li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur.
+              Pencarian barang yang hilang menjadi semakin mudah.
             </p>
           </div>
         </div>
@@ -85,6 +86,8 @@
     </section><!-- End About Section -->
 
     <!-- ======= Counts Section ======= -->
+    <br>
+    
     <section id="counts" class="counts">
       <div class="container">
 
@@ -116,20 +119,22 @@
     </section><!-- End Counts Section -->
 
     <!-- ======= Services Section ======= -->
+    <br>
+
     <section id="services" class="services section-bg">
       <div class="container">
 
-        <div class="section-title">
-          <span>Services</span>
-          <h2>Services</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+        <div style="text-align:center;" class="section-title">
+          <span>Layanan</span>
+          <h2>Layanan</h2>
+          <p>Kami siap membantu anda</p>
         </div>
 
         <div class="row">
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
+              <h4><a href="">Implementasi</a></h4>
               <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
             </div>
           </div>
@@ -137,7 +142,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
+              <h4><a href="">Training</a></h4>
               <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
             </div>
           </div>
@@ -145,7 +150,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
+              <h4><a href="">Support 24 jam</a></h4>
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
@@ -153,7 +158,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
+              <h4><a href="">Support 24 jam</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>
@@ -161,7 +166,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
+              <h4><a href="">Implementasi</a></h4>
               <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
             </div>
           </div>
@@ -169,7 +174,7 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Divera don</a></h4>
+              <h4><a href="">Training</a></h4>
               <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
             </div>
           </div>
@@ -180,13 +185,15 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Portfolio Section ======= -->
+    <br>
+
     <section id="portfolio" class="portfolio">
       <div class="container">
 
-        <div class="section-title">
+        <div style="text-align:center;" class="section-title">
           <span>Portfolio</span>
           <h2>Portfolio</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <p>Berikut portfolio project-project kami</p>
         </div>
 
         <div class="row">
@@ -298,13 +305,15 @@
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Testimonials Section ======= -->
+    <br>
+    
     <section id="testimonials" class="testimonials section-bg">
       <div class="container">
 
-        <div class="section-title">
+        <div style="text-align:center;" class="section-title">
           <span>Testimonials</span>
           <h2>Testimonials</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <p>Apa kata mereka tentang Aplikasi Pencari Barang Hilang ini</p>
         </div>
 
         <div class="owl-carousel testimonials-carousel">
@@ -370,6 +379,8 @@
     </section><!-- End Testimonials Section -->
 
     <!-- ======= Cta Section ======= -->
+    <br>
+    
     <section id="cta" class="cta">
       <div class="container">
 
@@ -383,13 +394,15 @@
     </section><!-- End Cta Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <br>
+    
+    <section style="text-align:center;" id="team" class="team section-bg">
       <div class="container">
 
         <div class="section-title">
           <span>Team</span>
-          <h2>Team</h2>
-          <p>Sit sint consectetur velit quisquam cupiditate impedit suscipit alias</p>
+          <h2>Tim Kami</h2>
+          <p>Kenali tim kami lebih dekat</p>
         </div>
 
         <div class="row">
@@ -399,7 +412,7 @@
               <h4>Agus Sutarom</h4>
               <span>Developer</span>
               <p>
-                Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                
               </p>
               <div class="social">
                 <a href=""><i class="icofont-twitter"></i></a>
@@ -416,7 +429,7 @@
               <h4>Dodi Rusdianto</h4>
               <span>Developer</span>
               <p>
-                Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                
               </p>
               <div class="social">
                 <a href=""><i class="icofont-twitter"></i></a>
@@ -433,7 +446,7 @@
               <h4>Ratno Hariyadi</h4>
               <span>Developer</span>
               <p>
-                Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                
               </p>
               <div class="social">
                 <a href=""><i class="icofont-twitter"></i></a>
@@ -450,7 +463,9 @@
     </section><!-- End Team Section -->
 
     <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <br>
+    
+    <section style="text-align:center;" id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
@@ -527,6 +542,8 @@
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
+  <br>
+  
   <footer id="footer">
 
     <div class="footer-top">
