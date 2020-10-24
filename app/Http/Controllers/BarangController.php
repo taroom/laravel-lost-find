@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Kategori;
 use Illuminate\Http\Request;
 
 class BarangController extends Controller
@@ -14,8 +15,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        $barangs = Barang::all();
-        return view(('barang.index'), compact('barangs'));
+        $barang = Barang::all();
+        return view('barang.index', compact('barang'));
     }
 
     /**
@@ -25,7 +26,9 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        $dataBaru = true;
+        $dataKategori = Kategori::all();
+        return view('barang.form', compact('dataBaru', 'dataKategori'));
     }
 
     /**
@@ -36,19 +39,32 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'gambar' => 'required',
             'deskripsi' => 'required',
+            'id_kategori' => 'required',
+            'user_id' => 'required',
             'tanggal_menemukan' => 'required',
             'tempat_menemukan' => 'required',
         ]);
 
-        Barang::create([
-            'gambar' => $request->gambar,
-            'deskripsi' => $request->deskripsi,
-            'tanggal_menemukan' => $request->tanggal_menemukan,
-            'tempat_menemukan' => $request->tempat_menemukan
-        ]);
+        $file = $request->file('gambar');
+        $p = new Barang();
+
+        $p->judul = $request->judul;
+        $p->gambar = $file->getClientOriginalName();
+        $p->deskripsi = $request->deskripsi;
+        $p->id_kategori = $request->id_kategori;
+        $p->tanggal_menemukan = $request->tanggal_menemukan;
+        $p->tempat_menemukan = $request->tempat_menemukan;
+        $p->user_id = $request->user_id;
+
+        // isi dengan nama folder tempat kemana file diupload
+        $tujuan_upload = 'data_file';
+        $file->move($tujuan_upload, $file->getClientOriginalName());
+
+        $p->save();
+        return redirect()->route('barang.index');
     }
 
     /**
@@ -59,7 +75,7 @@ class BarangController extends Controller
      */
     public function show(Barang $barang)
     {
-        //
+        return view('barang.view', compact('barang'));
     }
 
     /**
@@ -70,7 +86,9 @@ class BarangController extends Controller
      */
     public function edit(Barang $barang)
     {
-        //
+        $dataBaru = false;
+        $dataKategori = Kategori::all();
+        return view('barang.form', compact('dataBaru', 'dataKategori', 'barang'));
     }
 
     /**
@@ -82,7 +100,31 @@ class BarangController extends Controller
      */
     public function update(Request $request, Barang $barang)
     {
-        //
+        $this->validate($request, [
+            'deskripsi' => 'required',
+            'id_kategori' => 'required',
+            'user_id' => 'required',
+            'tanggal_menemukan' => 'required',
+            'tempat_menemukan' => 'required',
+        ]);
+
+        $barang->judul = $request->judul;
+        $file = $request->file('gambar');
+        // dd($file);
+        if ($file != null && $file->getSize() > 0) {
+            $barang->gambar = $file->getClientOriginalName();
+            $tujuan_upload = 'data_file';
+            $file->move($tujuan_upload, $file->getClientOriginalName());
+        }
+        $barang->deskripsi = $request->deskripsi;
+        $barang->id_kategori = $request->id_kategori;
+        $barang->tanggal_menemukan = $request->tanggal_menemukan;
+        $barang->tempat_menemukan = $request->tempat_menemukan;
+        $barang->user_id = $request->user_id;
+
+        $barang->save();
+
+        return redirect()->route('barang.index');
     }
 
     /**
@@ -93,6 +135,7 @@ class BarangController extends Controller
      */
     public function destroy(Barang $barang)
     {
-        //
+        $barang->delete();
+        return redirect()->route('barang.index');
     }
 }
