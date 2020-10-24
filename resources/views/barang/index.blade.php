@@ -22,7 +22,7 @@
             <tbody>
                 @foreach($barang ?? '' as $benda)
                 <tr>
-                <th scope="row">{{ $loop->iteration}}</th>
+                <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$benda->gambar}}</td>
                 <td>{{$benda->deskripsi}}</td>
                 <td>{{$benda->id_kategori}}</td>
