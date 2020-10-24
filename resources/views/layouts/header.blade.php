@@ -17,13 +17,6 @@
             <ul>
               <li><a href="#">Menemukan Barang</a></li>
               <li><a href="#">Mencari Barang</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
             </ul>
           </li>
           <li><a href="#contact">Kontak</a></li>
