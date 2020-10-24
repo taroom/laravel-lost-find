@@ -14,7 +14,8 @@ class TagController extends Controller
      */
     public function index()
     {
-        //
+        $tag = Tag::all();
+        return view('tag.index', compact('tag'));
     }
 
     /**
@@ -24,7 +25,8 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        $dataBaru = true;
+        return view('tag.form', compact('dataBaru'));
     }
 
     /**
@@ -35,7 +37,18 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $p = new Tag();
+
+        $p->nama = $request->nama;
+        $p->slug = $request->slug;
+        
+        $p->save();
+        return redirect()->route('tag.index');
     }
 
     /**
@@ -46,7 +59,7 @@ class TagController extends Controller
      */
     public function show(Tag $tag)
     {
-        //
+        return view('tag.view', compact('kategori'));
     }
 
     /**
@@ -57,7 +70,8 @@ class TagController extends Controller
      */
     public function edit(Tag $tag)
     {
-        //
+        $dataBaru = false;
+        return view('tag.form', compact('dataBaru', 'tag'));
     }
 
     /**
@@ -69,7 +83,18 @@ class TagController extends Controller
      */
     public function update(Request $request, Tag $tag)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'slug' => 'required',
+        ]);
+
+        $p = new Tag();
+
+        $p->nama = $request->nama;
+        $p->slug = $request->slug;
+        
+        $p->save();
+        return redirect()->route('tag.index');
     }
 
     /**
@@ -80,6 +105,7 @@ class TagController extends Controller
      */
     public function destroy(Tag $tag)
     {
-        //
+        $tag->delete();
+        return redirect()->route('tag.index');
     }
 }

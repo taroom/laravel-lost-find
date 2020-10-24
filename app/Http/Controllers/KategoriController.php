@@ -25,7 +25,8 @@ class KategoriController extends Controller
      */
     public function create()
     {
-        //
+        $dataBaru = true;
+        return view('kategori.form', compact('dataBaru'));
     }
 
     /**
@@ -36,7 +37,21 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'slug' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        $p = new Kategori();
+
+        $p->nama = $request->nama;
+        $p->slug = $request->slug;
+        $p->deskripsi = $request->deskripsi;
+        
+        $p->save();
+        return redirect()->route('kategori.index');
+
     }
 
     /**
@@ -47,7 +62,7 @@ class KategoriController extends Controller
      */
     public function show(Kategori $kategori)
     {
-        //
+        return view('kategori.view', compact('kategori'));
     }
 
     /**
@@ -58,7 +73,8 @@ class KategoriController extends Controller
      */
     public function edit(Kategori $kategori)
     {
-        //
+        $dataBaru = false;
+        return view('kategori.form', compact('dataBaru', 'kategori'));
     }
 
     /**
@@ -70,7 +86,21 @@ class KategoriController extends Controller
      */
     public function update(Request $request, Kategori $kategori)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'slug' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        $p = new Kategori();
+
+        $p->nama = $request->nama;
+        $p->slug = $request->slug;
+        $p->deskripsi = $request->deskripsi;
+        
+        $p->save();
+        return redirect()->route('kategori.index');
+
     }
 
     /**
@@ -81,6 +111,7 @@ class KategoriController extends Controller
      */
     public function destroy(Kategori $kategori)
     {
-        //
+        $kategori->delete();
+        return redirect()->route('kategori.index');
     }
 }
