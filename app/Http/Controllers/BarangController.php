@@ -65,7 +65,7 @@ class BarangController extends Controller
         $file->move($tujuan_upload, $file->getClientOriginalName());
 
         $p->save();
-        return redirect()->route('barang.index');
+        return redirect()->route('barang.index')->with('status', 'Berhasil menambahkan barang!');;
     }
 
     /**
@@ -125,7 +125,7 @@ class BarangController extends Controller
 
         $barang->save();
 
-        return redirect()->route('barang.index');
+        return redirect()->route('barang.index')->with('status', 'Berhasil update barang!');;
     }
 
     /**
@@ -137,6 +137,6 @@ class BarangController extends Controller
     public function destroy(Barang $barang)
     {
         $barang->delete();
-        return redirect()->route('barang.index');
+        return redirect()->route('barang.index')->with('status', 'Berhasil menghapus barang!');;
     }
 }

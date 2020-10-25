@@ -82,3 +82,16 @@
     </section>
 </main>
 @endsection
+
+@push('scriptjs')
+<script src="{{ asset('enno/assets/vendor/swal.min.js') }}"></script>
+@if ($message = Session::get('status'))
+    <script>
+    Swal.fire(
+        'Data Barang',
+        '{{ $message }}',
+        'success'
+    )
+    </script>
+@endif
+@endpush
