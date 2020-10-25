@@ -38,12 +38,12 @@
                                         @foreach($barang ?? '' as $benda)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration}}</th>
-                                            <td><img src="data_file/{{$benda->gambar}}" class="img-fluid" alt="{{$benda->judul}}"></td>
+                                            <td><img src="{{asset('data_file/'.$benda->gambar)}}" class="img-fluid" alt="{{$benda->judul}}"></td>
                                             <td>{!! $benda->deskripsi !!}</td>
                                             <td>{{$benda->kategori->nama}}</td>
-                                            <td>{{$benda->tanggal_menemukan}}</td>
+                                            <td>{{ date('d-m-Y', strtotime($benda->tanggal_menemukan))}}</td>
                                             <td>{{$benda->tempat_menemukan}}</td>
-                                            <td>{{$benda->user_id}}</td>
+                                            <td>{{$benda->user->name}}</td>
                                             <td>
                                                 <form action="{{route('barang.destroy', $benda->id)}}" method="post">
                                                     @method('delete')

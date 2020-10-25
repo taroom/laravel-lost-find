@@ -28,12 +28,12 @@
                                 </form>
 
                                 <h3>{{ $barang->judul }}</h3>
-                                {{$barang->gambar}} <br>
-                                {{$barang->deskripsi}} <br>
-                                {{$barang->id_kategori}} <br>
-                                {{$barang->tanggal_menemukan}} <br>
+                                <img src="{{asset('data_file/'.$barang->gambar)}}" class="img-fluid" alt="{{$barang->judul}}">
+                                {!! $barang->deskripsi !!} <br>
+                                {{$barang->kategori->nama}} <br>
+                                {{date('d-m-Y', strtotime($barang->tanggal_menemukan))}} <br>
                                 {{$barang->tempat_menemukan}} <br>
-                                {{$barang->user_id}} <br>
+                                {{$barang->user->name}} <br>
                             </div>
                         </div>
                     </div>
