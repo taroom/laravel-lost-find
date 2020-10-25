@@ -13,14 +13,14 @@ class CreateTagBarangsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tag_barang', function (Blueprint $table) {
+        Schema::create('barang_tag', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('id_tag');
-            $table->unsignedBigInteger('id_barang');
+            $table->unsignedBigInteger('tag_id');
+            $table->unsignedBigInteger('barang_id');
             $table->timestamps();
 
-            $table->foreign('id_tag')->references('id')->on('tag')->onUpdate('cascade')->onDelete('cascade');
-            $table->foreign('id_barang')->references('id')->on('barang')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('tag_id')->references('id')->on('tag')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreign('barang_id')->references('id')->on('barang')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 
@@ -31,6 +31,6 @@ class CreateTagBarangsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tag_barang');
+        Schema::dropIfExists('barang_tag');
     }
 }
