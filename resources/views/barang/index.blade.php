@@ -28,6 +28,7 @@
                                             <th scope="col">Foto</th>
                                             <th scope="col">Deskripsi</th>
                                             <th scope="col">Kategori</th>
+                                            <th scope="col">Tags</th>
                                             <th scope="col">Tanggal Ditemukan</th>
                                             <th scope="col">Tempat Ditemukan</th>
                                             <th scope="col">User</th>
@@ -41,6 +42,13 @@
                                             <td><img src="{{asset('data_file/'.$benda->gambar)}}" class="img-fluid" alt="{{$benda->judul}}"></td>
                                             <td>{!! $benda->deskripsi !!}</td>
                                             <td>{{$benda->kategori->nama}}</td>
+                                            <td>
+                                                <ul>
+                                                    @foreach ($benda->tags as $tag)
+                                                    <li>{{ $tag->nama }}</li>
+                                                    @endforeach    
+                                                </ul>
+                                            </td>
                                             <td>{{ date('d-m-Y', strtotime($benda->tanggal_menemukan))}}</td>
                                             <td>{{$benda->tempat_menemukan}}</td>
                                             <td>{{$benda->user->name}}</td>

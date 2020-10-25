@@ -18,4 +18,9 @@ class Barang extends Model
     {
         return $this->hasOne('App\User', 'id', 'user_id');
     }
+
+    public function tags()
+    {
+        return $this->belongsToMany('App\Tag', 'tag_barang', 'id_barang', 'id');
+    }
 }
