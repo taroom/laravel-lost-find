@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class KategoriController extends Controller
 {
@@ -45,7 +46,7 @@ class KategoriController extends Controller
         $p = new Kategori();
 
         $p->nama = $request->nama;
-        $p->slug = str_slug($request->nama, '-');
+        $p->slug = Str::slug($request->nama, '-');
         $p->deskripsi = $request->deskripsi;
 
         $p->save();
@@ -89,13 +90,11 @@ class KategoriController extends Controller
             'deskripsi' => 'required',
         ]);
 
-        $p = new Kategori();
+        $kategori->nama = $request->nama;
+        $kategori->slug = Str::slug($request->nama, '-');
+        $kategori->deskripsi = $request->deskripsi;
 
-        $p->nama = $request->nama;
-        $p->slug = str_slug($request->nama);
-        $p->deskripsi = $request->deskripsi;
-
-        $p->save();
+        $kategori->save();
         return redirect()->route('kategori.index');
     }
 

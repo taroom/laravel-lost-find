@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class TagController extends Controller
 {
@@ -44,7 +45,7 @@ class TagController extends Controller
         $p = new Tag();
 
         $p->nama = $request->nama;
-        $p->slug = str_slug($request->nama);
+        $p->slug = Str::slug($request->nama, '-');
 
         $p->save();
         return redirect()->route('tag.index');
@@ -86,12 +87,11 @@ class TagController extends Controller
             'nama' => 'required',
         ]);
 
-        $p = new Tag();
 
-        $p->nama = $request->nama;
-        $p->slug = str_slug($request->nama);
+        $tag->nama = $request->nama;
+        $tag->slug = Str::slug($request->nama, '-');
 
-        $p->save();
+        $tag->save();
         return redirect()->route('tag.index');
     }
 
