@@ -38,8 +38,8 @@
                                         @foreach($barang ?? '' as $benda)
                                         <tr>
                                             <th scope="row">{{ $loop->iteration}}</th>
-                                            <td>{{$benda->gambar}}</td>
-                                            <td>{{$benda->deskripsi}}</td>
+                                            <td><img src="data_file/{{$benda->gambar}}" class="img-fluid" alt="{{$benda->judul}}"></td>
+                                            <td>{!! $benda->deskripsi !!}</td>
                                             <td>{{$benda->id_kategori}}</td>
                                             <td>{{$benda->tanggal_menemukan}}</td>
                                             <td>{{$benda->tempat_menemukan}}</td>
