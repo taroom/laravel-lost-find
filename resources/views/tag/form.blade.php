@@ -18,13 +18,11 @@
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="mt-3">Daftar Label</h3>
-
+                                @include('share.showerrors')
                                 @if (!$dataBaru)
-                                <form action="{{ route('tag.update', $tag->id)}}" method="post"
-                                    enctype="multipart/form-data">
+                                <form action="{{ route('tag.update', $tag->id)}}" method="post">
                                     @else
-                                    <form action="{{ route('tag.store') }}" method="post"
-                                        enctype="multipart/form-data">
+                                    <form action="{{ route('tag.store') }}" method="post">
                                         @endif
 
                                         @csrf

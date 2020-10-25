@@ -18,7 +18,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <h3 class="mt-3">Daftar Barang Temuan</h3>
-
+                                @include('share.showerrors')
                                 @if (!$dataBaru)
                                 <form action="{{ route('barang.update', $barang->id)}}" method="post"
                                     enctype="multipart/form-data">
