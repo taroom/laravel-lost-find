@@ -12,7 +12,7 @@
 */
 Auth::routes();
 Route::get('/', 'HomeController@welcome')->name('index');
-Route::get('/home', 'HomeController@home')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/view-barang/{id}', 'HomeController@view_barang')->name('viewbarang');
 
 Route::resource('barang', 'BarangController');
