@@ -38,11 +38,6 @@
                                         <input type="text" class="form-control" name="nama" id="nama"
                                             value="{{ $tag->nama?? ''}}">
 
-                                       
-                                        Slug : <br>
-                                        <input type="text" class="form-control" name="slug"
-                                            id="slug" value="{{ $tag->slug?? ''}}">
-                                        
                                                                                 
                                         <br>
                                         <input type="submit" value="Simpan" class="btn btn-sm btn-success">

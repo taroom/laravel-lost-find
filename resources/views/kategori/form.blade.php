@@ -38,14 +38,10 @@
                                         <input type="text" class="form-control" name="nama" id="nama"
                                             value="{{ $kategori->nama?? ''}}">
 
-                                       
-                                        Slug : <br>
-                                        <input type="text" class="form-control" name="slug"
-                                            id="slug" value="{{ $kategori->slug?? ''}}">
                                         
                                         Deskripsi : <br>
-                                        <input type="text" class="form-control" name="deskripsi"
-                                            id="deskripsi" value="{{ $kategori->deskripsi?? ''}}">
+                                        <textarea class="form-control" name="deskripsi"
+                                            id="deskripsi">{{ $kategori->deskripsi?? ''}}</textarea>
 
                                         
                                         <br>

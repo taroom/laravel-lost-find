@@ -45,8 +45,8 @@ class TagController extends Controller
         $p = new Tag();
 
         $p->nama = $request->nama;
-        $p->slug = $request->slug;
-        
+        $p->slug = str_slug($request->nama);
+
         $p->save();
         return redirect()->route('tag.index');
     }
@@ -91,8 +91,8 @@ class TagController extends Controller
         $p = new Tag();
 
         $p->nama = $request->nama;
-        $p->slug = $request->slug;
-        
+        $p->slug = str_slug($request->nama);
+
         $p->save();
         return redirect()->route('tag.index');
     }

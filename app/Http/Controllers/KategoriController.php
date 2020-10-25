@@ -46,12 +46,11 @@ class KategoriController extends Controller
         $p = new Kategori();
 
         $p->nama = $request->nama;
-        $p->slug = $request->slug;
+        $p->slug = str_slug($request->nama, '-');
         $p->deskripsi = $request->deskripsi;
-        
+
         $p->save();
         return redirect()->route('kategori.index');
-
     }
 
     /**
@@ -95,12 +94,11 @@ class KategoriController extends Controller
         $p = new Kategori();
 
         $p->nama = $request->nama;
-        $p->slug = $request->slug;
+        $p->slug = str_slug($request->nama);
         $p->deskripsi = $request->deskripsi;
-        
+
         $p->save();
         return redirect()->route('kategori.index');
-
     }
 
     /**
