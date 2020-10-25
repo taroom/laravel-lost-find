@@ -80,3 +80,16 @@
     </section>
 </main>
 @endsection
+
+@push('scriptcss')
+<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+@endpush
+
+@push('scriptjs')
+<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#deskripsi').summernote();
+    });
+</script>
+@endpush

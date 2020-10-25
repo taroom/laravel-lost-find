@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Barang;
+use App\Tag;
 use App\Kategori;
 use Illuminate\Http\Request;
 

@@ -17,7 +17,7 @@
     <link href="{{ asset('enno/assets/vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('enno/assets/vendor/venobox/venobox.css') }}" rel="stylesheet">
     <link href="{{ asset('enno/assets/vendor/owl.carousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
-
+    @stack('scriptcss')
 </head>
 <body>
     @include('layouts.header')
@@ -33,6 +33,8 @@
     <script src="{{ asset('enno/assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('enno/assets/vendor/venobox/venobox.min.js') }}"></script>
     <script src="{{ asset('enno/assets/vendor/owl.carousel/owl.carousel.min.js') }}"></script>
+    @stack('scriptjs')
+
     <script src="{{ asset('enno/assets/js/main.js') }}" defer></script>
 </body>
 </html>

@@ -28,12 +28,20 @@
                                 </form>
 
                                 <h3>{{ $barang->judul }}</h3>
-                                {{$barang->gambar}} <br>
-                                {{$barang->deskripsi}} <br>
-                                {{$barang->id_kategori}} <br>
-                                {{$barang->tanggal_menemukan}} <br>
-                                {{$barang->tempat_menemukan}} <br>
-                                {{$barang->user_id}} <br>
+                                <img src="{{asset('data_file/'.$barang->gambar)}}" class="img-fluid" alt="{{$barang->judul}}">
+                                Deskripsi : <br>
+                                {!! $barang->deskripsi !!} <br>
+                                
+                                Kategori : {{$barang->kategori->nama}} <br>
+                                Tanggal Menemukan : {{date('d-m-Y', strtotime($barang->tanggal_menemukan))}} <br>
+                                Tempat Menemukan : {{$barang->tempat_menemukan}} <br>
+                                Pengguna : {{$barang->user->name}} <br>
+                                Tag/Label : 
+                                <ul>
+                                    @foreach ($barang->tags as $tag)
+                                    <li>{{ $tag->nama }}</li>
+                                    @endforeach    
+                                </ul>
                             </div>
                         </div>
                     </div>
