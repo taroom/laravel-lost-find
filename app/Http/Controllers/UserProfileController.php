@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Barang;
+use App\User;
 use App\UserProfile;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserProfileController extends Controller
 {
@@ -14,7 +17,8 @@ class UserProfileController extends Controller
      */
     public function index()
     {
-        //
+        $user = User::find(Auth::id());
+        return view('userprofile', compact('user'));
     }
 
     /**
