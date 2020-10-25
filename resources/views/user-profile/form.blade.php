@@ -20,9 +20,9 @@
                                 <h3 class="mt-3">Profile</h3>
                                 @include('share.showerrors')
                                 @if (!$dataBaru)
-                                <form action="{{ route('UserProfile.update', $UserProfile->id)}}" method="post">
+                                <form action="/user-profile/update-profile" method="post">
                                     @else
-                                    <form action="{{ route('UserProfile.store') }}" method="post">
+                                    <form action="/user-profile/update-profile" method="post">
                                         @endif
 
                                         @csrf
@@ -34,23 +34,23 @@
                                         
                                         Nama : <br>
                                         <input type="text" class="form-control" name="nama" id="nama"
-                                            value="{{ $UserProfile->nama?? ''}}">
+                                            value="{{ $model->nama?? ''}}">
 
                                         
                                         Alamat : <br>
                                         <input type="text" class="form-control" name="alamat" id="alamat"
-                                            value="{{ $UserProfile->alamat?? ''}}">
+                                            value="{{ $model->alamat?? ''}}">
                                         
 
                                         No. Handphone : <br>
                                         <input type="text" class="form-control" name="no_hp" id="no_hp"
-                                            value="{{ $UserProfile->no_hp?? ''}}">
+                                            value="{{ $model->no_hp?? ''}}">
 
 
                                         
                                         <br>
                                         <input type="submit" value="Simpan" class="btn btn-sm btn-success">
-                                        <a href="{{ route('kategori.index') }}" class="btn btn-success btn-sm">Kembali</a>
+                                        <a href="/user-profile/update-profile" class="btn btn-success btn-sm">Kembali</a>
                                     </form>
 
                             </div>

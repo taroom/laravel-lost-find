@@ -17,7 +17,12 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                Nama : {{ $user->name }}
+                                Email : {{ $user->email }} <br>
+                                Nama : {{ $user->name }} <br>
+                                Alamat : {{ $user->profile->alamat ?? '' }} <br>
+                                No. HP : {{ $user->profile->no_hp ?? '' }} <br>
+
+                                <a href="/user-profile/update-profile" class="btn btn-sm btn-warning">Update Data</a>
                                 <hr>
                                 Daftar Barang Terkait :
                                 <ul>

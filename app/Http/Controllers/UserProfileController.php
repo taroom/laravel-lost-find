@@ -85,6 +85,42 @@ class UserProfileController extends Controller
         return view('user-profile.form', compact('dataBaru', 'user-profile'));
     }
 
+    public function update_profile()
+    {
+        $dataBaru = false;
+        $model = UserProfile::find(Auth::id());
+
+        if ($model == null) {
+            $model = new UserProfile();
+            $model->id = Auth::id();
+            $model->nama = Auth::user()->name;
+            $model->alamat = '-';
+            $model->no_hp = '-';
+            $model->save();
+        }
+
+        return view('user-profile.form', compact('dataBaru', 'model'));
+    }
+
+    public function process_profile(Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+        ]);
+
+        $model = UserProfile::find(Auth::id());
+
+        $model->nama = $request->nama;
+        $model->alamat = $request->alamat;
+        $model->no_hp = $request->no_hp;
+
+
+        $model->save();
+        return redirect()->route('user-profile.index');
+    }
+
     /**
      * Update the specified resource in storage.
      *
