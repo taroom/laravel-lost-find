@@ -28,7 +28,7 @@
                                 </form>
 
                                 <h3>{{ $barang->judul }}</h3>
-                                <img src="{{asset('data_file/'.$barang->gambar)}}" class="img-fluid" alt="{{$barang->judul}}">
+                                <img src="{{asset('data_file/'.$barang->gambar)}}" class="img-fluid" alt="{{$barang->judul}}"> <br>
                                 Deskripsi : <br>
                                 {!! $barang->deskripsi !!} <br>
                                 
