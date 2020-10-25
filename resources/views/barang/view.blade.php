@@ -40,7 +40,14 @@
                                 <a href="/input-tag/{{$barang->id}}" class="btn btn-success btn-sm">Tambahkan Label</a>
                                 <ul>
                                     @foreach ($barang->tags as $tag)
-                                    <li>{{ $tag->nama }}</li>
+                                    <li>
+                                        <form action="/hapus-tag/{{$barang->id}}/{{$tag->id}}" method="post">
+                                            @method('delete')
+                                            @csrf
+                                            <button type="submit" class="badge badge-danger"
+                                            class="badge badge-danger" title="klik untuk hapus">{{ $tag->nama }}</button>
+                                        </form>
+                                    </li>
                                     @endforeach    
                                 </ul>
                             </div>

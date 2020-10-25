@@ -15,6 +15,7 @@ Route::get('/', 'HomeController@welcome')->name('index');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/view-barang/{id}', 'HomeController@view_barang')->name('viewbarang');
 Route::get('/input-tag/{id}', 'TagBarangController@input_tag');
+Route::delete('/hapus-tag/{id}/{id2}', 'TagBarangController@delete_tag');
 
 Route::resource('barang', 'BarangController');
 Route::resource('kategori', 'KategoriController');

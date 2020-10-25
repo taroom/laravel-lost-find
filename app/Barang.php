@@ -21,6 +21,6 @@ class Barang extends Model
 
     public function tags()
     {
-        return $this->belongsToMany('App\Tag', 'tag_barang', 'id_barang', 'id');
+        return $this->belongsToMany('App\Tag');
     }
 }

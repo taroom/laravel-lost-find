@@ -55,14 +55,19 @@ class TagBarangController extends Controller
             'id_tag' => 'required',
         ]);
 
-        $p = new TagBarang();
+        $p = Barang::find($request->id_barang);
+        $p->tags()->attach($request->id_tag);
 
-        $p->id_barang = $request->id_barang;
-        $p->id_tag = $request->id_tag;
-
-        $p->save();
         return redirect()->route('barang.show', $request->id_barang);
     }
+
+    public function delete_tag($id, $id2)
+    {
+        $tagBarang = Barang::find($id);
+        $tagBarang->tags()->detach($id2);
+        return redirect()->route('barang.show', $id);
+    }
+
 
     /**
      * Display the specified resource.

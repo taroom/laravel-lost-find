@@ -10,6 +10,6 @@ class Tag extends Model
 
     public function barang()
     {
-        return $this->belongsToMany('App\Barang', 'tag_barang', 'id_tag', 'id');
+        return $this->belongsToMany('App\Barang');
     }
 }
