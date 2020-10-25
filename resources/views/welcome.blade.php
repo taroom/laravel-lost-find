@@ -7,7 +7,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
-          <h1>Aplikasi Pencari Barang Hilang</h1>
+          <h1>Aplikasi Pencari Barang Hilang Kelompok 18</h1>
           <h2>Pencarian barang kini jadi lebih mudah dan praktis</h2>
           <div class="d-flex">
             <a href="#about" class="btn-get-started scrollto">Mari Mulai </a>
