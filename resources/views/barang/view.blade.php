@@ -37,6 +37,7 @@
                                 Tempat Menemukan : {{$barang->tempat_menemukan}} <br>
                                 Pengguna : {{$barang->user->name}} <br>
                                 Tag/Label : 
+                                <a href="/input-tag/{{$barang->id}}" class="btn btn-success btn-sm">Tambahkan Label</a>
                                 <ul>
                                     @foreach ($barang->tags as $tag)
                                     <li>{{ $tag->nama }}</li>

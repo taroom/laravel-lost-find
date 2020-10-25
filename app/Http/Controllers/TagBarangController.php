@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Barang;
 use App\TagBarang;
+use App\Tag;
 use Illuminate\Http\Request;
 
 class TagBarangController extends Controller
@@ -27,9 +29,17 @@ class TagBarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Barang $barang)
     {
-        //
+        $tags = Tag::all();
+        return view('tag_barang.form', compact('barang', 'tags'));
+    }
+
+    public function input_tag($id)
+    {
+        $barang = Barang::find($id);
+        $tags = Tag::all();
+        return view('tag_barang.form', compact('barang', 'tags'));
     }
 
     /**
@@ -40,7 +50,18 @@ class TagBarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'id_barang' => 'required',
+            'id_tag' => 'required',
+        ]);
+
+        $p = new TagBarang();
+
+        $p->id_barang = $request->id_barang;
+        $p->id_tag = $request->id_tag;
+
+        $p->save();
+        return redirect()->route('barang.show', $request->id_barang);
     }
 
     /**

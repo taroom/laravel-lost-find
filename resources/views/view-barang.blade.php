@@ -27,11 +27,9 @@
                                 Tempat Menemukan : {{$barang->tempat_menemukan}} <br>
                                 Pengguna : {{$barang->user->name}} <br>
                                 Tag/Label : 
-                                <ul>
                                     @foreach ($barang->tags as $tag)
-                                    <li>{{ $tag->nama }}</li>
-                                    @endforeach    
-                                </ul>
+                                    <span class="badge badge-dark">{{ $tag->nama }}</span>
+                                    @endforeach
                             </div>
                         </div>
                     </div>
