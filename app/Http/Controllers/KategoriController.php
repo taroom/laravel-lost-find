@@ -39,7 +39,6 @@ class KategoriController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'slug' => 'required',
             'deskripsi' => 'required',
         ]);
 
@@ -87,7 +86,6 @@ class KategoriController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'slug' => 'required',
             'deskripsi' => 'required',
         ]);
 

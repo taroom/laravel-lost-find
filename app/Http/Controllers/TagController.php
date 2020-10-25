@@ -39,7 +39,6 @@ class TagController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'slug' => 'required',
         ]);
 
         $p = new Tag();
@@ -85,7 +84,6 @@ class TagController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'slug' => 'required',
         ]);
 
         $p = new Tag();
