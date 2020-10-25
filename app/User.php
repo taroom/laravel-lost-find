@@ -41,4 +41,9 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Barang', 'user_id', 'id');
     }
+
+    public function profile()
+    {
+        return $this->hasOne(UserProfile::class);
+    }
 }

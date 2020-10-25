@@ -28,7 +28,8 @@ class UserProfileController extends Controller
      */
     public function create()
     {
-        //
+        $dataBaru = true;
+        return view('user-profile.form', compact('dataBaru'));
     }
 
     /**
@@ -39,7 +40,21 @@ class UserProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+        ]);
+
+        $p = new Profile();
+
+        $p->nama = $request->nama;
+        $p->alamat = $request->alamat;
+        $p->no_hp = $request->no_hp;
+
+
+        $p->save();
+        return redirect()->route('home');
     }
 
     /**
@@ -61,7 +76,8 @@ class UserProfileController extends Controller
      */
     public function edit(UserProfile $userProfile)
     {
-        //
+        $dataBaru = false;
+        return view('user-profile.form', compact('dataBaru', 'user-profile'));
     }
 
     /**
@@ -73,7 +89,22 @@ class UserProfileController extends Controller
      */
     public function update(Request $request, UserProfile $userProfile)
     {
-        //
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required',
+            'no_hp' => 'required',
+        ]);
+
+        $p = new Profile();
+
+        $p->nama = $request->nama;
+        $p->alamat = $request->alamat;
+        $p->no_hp = $request->no_hp;
+
+
+        $p->save();
+        return redirect()->route('home');
+
     }
 
     /**
