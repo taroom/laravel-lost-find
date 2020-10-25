@@ -1,4 +1,5 @@
 
+    <footer>
     <div class="container footer-bottom clearfix">
         <div class="copyright">
           &copy; Copyright {{date('Y')}} <strong><span>Sanbercode Laravel Final</span></strong>. All Rights Reserved
