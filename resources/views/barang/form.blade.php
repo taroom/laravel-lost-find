@@ -44,17 +44,17 @@
                                         Gambar : <br>
                                         <input type="file" class="form-control" name="gambar" id="gambar">
 
+                                        Deskripsi : <br>
+                                        <textarea class="form-control" name="deskripsi"
+                                            id="deskripsi">{{ $barang->deskripsi ?? ''}}</textarea>
+
                                         Tanggal Menemukan : <br>
                                         <input type="text" class="form-control" name="tanggal_menemukan"
-                                            id="tanggal_menemukan" value="{{ $barang->tanggal_menemukan?? ''}}">
+                                            id="tanggal_menemukan" data-date-end-date="0d" value="{{ $barang->tanggal_menemukan?? ''}}">
 
                                         Tempat Menemukan : <br>
                                         <input type="text" class="form-control" name="tempat_menemukan"
                                             id="tempat_menemukan" value="{{ $barang->tempat_menemukan?? ''}}">
-
-                                        Deskripsi : <br>
-                                        <textarea class="form-control" name="deskripsi"
-                                            id="deskripsi">{{ $barang->deskripsi ?? ''}}</textarea>
 
                                         Kategori : <br>
                                         <select class="form-control" name="id_kategori" id="id_kategori">
@@ -83,13 +83,20 @@
 
 @push('scriptcss')
 <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
+<link href="{{asset('enno/assets/vendor/datepicker/css/bootstrap-datepicker.standalone.min.css')}}" rel="stylesheet">
 @endpush
 
 @push('scriptjs')
 <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
+<script src="{{asset('enno/assets/vendor/datepicker/js/bootstrap-datepicker.min.js')}}"></script>
 <script>
     $(document).ready(function() {
         $('#deskripsi').summernote();
+        $('#tanggal_menemukan').datepicker({
+            format: 'yyyy-mm-dd',
+            todayBtn:true,
+            todayHighlight:true
+        });
     });
 </script>
 @endpush
